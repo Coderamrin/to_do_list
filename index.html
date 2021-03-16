@@ -4,15 +4,63 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>To Do List</title>
+	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
+	<div class="wrapper">
+		<header class="header">
+			<h1 class="maintitle title">To Do App</h1>
+		</header>
+		<main class="main container">
+			<div class="projects">
+				<h1 class="title projectTitle">Projects</h1>
+				<p class="projectName">default</p>
+				<p class="projectName">today</p>
+				<p class="projectName">this week</p>
 
-	<header class="header">
-		<h1 class="maintitle title">To Do App</h1>
-	</header>
-	<main class="main"></main>
-	<footer class="footer">&copy; 2021 <a href="">amrin</a></footer>
+				<button class="btn addProject">add project</button>
+			</div>
 
+			<div class="tasks">
+				<h1 class="title">Tasks</h1>
+				<div class="task">
+					<p class="tasksName">TOP</p>
+					<p class="duedate">22/1/2020</p>
+					<input type="checkbox" class="checkbox">
+				</div>
+
+				<div class="task">
+					<p class="tasksName">TOP</p>
+					<p class="duedate">22/1/2020</p>
+					<input type="checkbox" class="checkbox">
+				</div>
+
+				<div class="task">
+					<p class="tasksName">TOP</p>
+					<p class="duedate">22/1/2020</p>
+					<input type="checkbox" class="checkbox">
+				</div>
+
+				<div class="task">
+					<p class="tasksName">TOP</p>
+					<p class="duedate">22/1/2020</p>
+					<input type="checkbox" class="checkbox">
+				</div>
+				<button class="btn addTask">add task</button>
+			</div>
+		</main>
+
+		<div class="form container">
+			<input type="text" class="formField"> 
+			<div class="formBtns">
+				<button class="btn formBtn">Add</button>
+				<button class="btn formBtn">Cancel</button>
+			</div>
+		</div>
+		<footer class="footer">&copy; 2021 <a href="https://github.com/amr1n">amrin</a></footer>
+
+	</div>
 	<script src="main.js"></script>
 </body>
 </html>
