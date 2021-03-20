@@ -39,11 +39,11 @@ p, h2 {
 
 .main {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
-	margin-top: 25px;
+	grid-template-columns: 150px 250px;
+	margin-top: 35px;
 }
 
-.title {
+.title {  
 	margin: 20px 0;
 }
 
@@ -58,20 +58,20 @@ p, h2 {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 2px solid #e4fbff;
-	padding: 5px;
 	margin-top: 10px;
 }
 
-.tasks {
+.tasksCont {
 	background: #7868e6;
 	color: #edeef7;
-	padding: 0 15px;
+	padding: 15px;
 	margin-bottom: 20px;
 	margin-left: 25px;
 }
 
 .tabs {
 	color: #7868e6;
+	
 }
 
 .projectTitle {
@@ -154,7 +154,6 @@ p, h2 {
 	text-transform: capitalize;
 	display: flex;
 	margin-bottom: 20px;
-	width: 70%;
 }
 
 .projectsContainer p {
@@ -167,10 +166,14 @@ p, h2 {
 	padding: 10px 10px;
 }
  
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 700px) {
 	.form {
 		width: 50%;
 		left: 25%;
+	}
+
+	.main {
+		grid-template-columns: 250px 450px;
 	} 
 }
 
