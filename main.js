@@ -7,26 +7,110 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\r\nlet dom = (() => {\r\n   let addProjectBtn = document.querySelector(\".addProject\");\r\n   let addTaskBtn = document.querySelector(\".addTask\");\r\n   let inputForm = document.querySelector(\".form\");\r\n   let add = document.querySelector(\".add\");\r\n   let cancel = document.querySelector(\".cancel\");\r\n   let formField = document.querySelector(\".formField\");\r\n\r\n   let projects = document.querySelector(\".projects\");\r\n\r\n   return {\r\n\taddProjectBtn,\r\n\taddTaskBtn,\r\n\tinputForm,\r\n\tformField,\r\n\tadd,\r\n\tcancel,\r\n\tprojects,\r\n   };\r\n\r\n})();\r\n\r\nlet addProject = (() => {  \r\n\r\n\tfunction add() {\r\n\t\tlet name = dom.formField.value;\r\n\r\n\t\tif (name == \"\") {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tlet projectContainer = document.createElement(\"div\");\r\n\t\tlet projectName = document.createElement(\"p\");\r\n\t\tlet removeBtn = document.createElement(\"p\");\r\n\t\tprojectName.textContent = name;\r\n\t\tremoveBtn.textContent = \"X\";\r\n\r\n\t\tprojectContainer.appendChild(projectName);\r\n\t\tprojectContainer.appendChild(removeBtn);\r\n\r\n\t\tdom.projects.appendChild(projectContainer);\r\n\t\tprojectContainer.classList.add(\"projectsContainer\");\r\n\r\n\t\tdom.inputForm.classList.add(\"removeForm\");\r\n\t\tdom.formField.value = \"\";\r\n\r\n\t\tremoveBtn.addEventListener(\"click\", () => {\r\n\t\t\tdom.projects.removeChild(projectContainer);\r\n\t\t});\r\n\r\n\t\tprojectContainer.addEventListener(\"click\", () => {\r\n\t\t\tprojectContainer.classList.add(\"active\");\r\n\t\t\t\r\n\t\t});\r\n\r\n\t}\r\n\r\n\tfunction cancel() {\r\n\t\tdom.inputForm.classList.add(\"removeForm\");\r\n\t\tdom.formField.value = \"\"; \r\n\t}\r\n\r\n\tdom.addProjectBtn.addEventListener(\"click\", () => {\r\n\t\tdom.inputForm.classList.remove(\"removeForm\"); \r\n\r\n\t\tdom.add.removeEventListener(\"click\", addTask.add);\r\n\t\tdom.add.addEventListener(\"click\",  add);\r\n\t\tdom.cancel.addEventListener(\"click\", cancel);\r\n\t});\r\n\r\n\treturn {\r\n\t\tadd,\r\n\t}\r\n})(); \r\n\r\n\r\n\r\nlet addTask = (() => { \r\n\tfunction add() {\r\n\t\tlet name = dom.formField.value;\r\n\r\n\t\tif (name == \"\") {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tlet taskContainer = document.querySelector(\".taskContainer\");\r\n\t\tlet task = document.createElement(\"div\");\r\n\t\tlet taskName = document.createElement(\"p\");\r\n\t\tlet dueDate = document.createElement(\"p\");\r\n\t\tlet checkbox = document.createElement(\"input\");\r\n\r\n\t\ttaskName.textContent = name;\r\n\t\tdueDate.textContent = \"22/1/2020\";\r\n\t\tcheckbox.setAttribute(\"type\", \"checkbox\");\r\n\t\tcheckbox.classList.add(\"checkbox\");\r\n\t\ttask.classList.add(\"task\"); \r\n\t\tdom.inputForm.classList.remove(\"removeForm\"); \r\n\r\n\t\tdom.formField.value = \"\";\r\n\r\n\t\ttaskContainer.append(task);\r\n\t\ttask.append(taskName, dueDate, checkbox);\r\n\r\n\t\tdom.inputForm.classList.add(\"removeForm\");  \r\n\t\t\r\n\t\t}\r\n\r\n\tfunction cancel() {\r\n\t\tdom.inputForm.classList.add(\"removeForm\");\r\n\t\tdom.formField.value = \"\"; \r\n\t}\r\n\r\n\tdom.addTaskBtn.addEventListener(\"click\", () => {\r\n\t\tdom.inputForm.classList.remove(\"removeForm\"); \r\n\r\n\t\tdom.add.removeEventListener(\"click\", addProject.add);\r\n\t\tdom.add.addEventListener(\"click\", add);\r\n\t\tdom.cancel.addEventListener(\"click\", cancel);\r\n\t});   \r\n \t\r\n \treturn {\r\n \t\tadd\r\n \t}\r\n})();\r\n \r\n \n\n//# sourceURL=webpack://to_do_list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tasks.js */ \"./src/modules/tasks.js\");\n/* harmony import */ var _modules_projects_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/projects.js */ \"./src/modules/projects.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://to_do_list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/dom.js":
+/*!****************************!*\
+  !*** ./src/modules/dom.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"dom\": () => (/* binding */ dom)\n/* harmony export */ });\nlet dom = (() => {\r\n\tlet addProject = document.querySelector(\".addProject\");\r\n\tlet addTask = document.querySelector(\".addTask\");\r\n\r\n\tlet date = () => {\r\n\t\tlet dateObj = new Date();\r\n\t\tlet month = dateObj.getUTCMonth() + 1;\r\n\t\tlet day = dateObj.getUTCDate();\r\n\t\tlet year = dateObj.getUTCFullYear();\r\n\r\n\t\treturn day + \"/\" + month + \"/\" + year;\r\n\t}\r\n\r\n\tfunction projectDom(name) {\r\n\t\tlet projects = document.querySelector(\".projects\");\r\n\t\tlet projectContainer = document.createElement(\"div\");\r\n\t\tlet projectName = document.createElement(\"h2\");\r\n\t\tlet removeProject = document.createElement(\"p\");\r\n\r\n\t\tprojectContainer.classList.add(\"projectContainer\");\r\n\t\tremoveProject.classList.add(\"removeProject\");\r\n\r\n\t\tprojectName.textContent = name;\r\n\t\tremoveProject.textContent = \"x\";\r\n\r\n\t\tprojectContainer.classList.add(\"project\"); \r\n\t\tremoveProject.classList.add(\"removeProject\");\r\n\r\n\t\tprojectContainer.append(projectName, removeProject);\r\n\t\tprojects.append(projectContainer);\r\n\t}\r\n\r\n\tfunction taskDom(name) {\r\n\t\tlet taskContainer = document.querySelector(\".taskContainer\");\r\n\t\tlet task = document.createElement(\"div\");\r\n\t\tlet taskName = document.createElement(\"h3\");\r\n\t\tlet dueDate = document.createElement(\"p\");\r\n\t\tlet checkBox = document.createElement(\"input\");\r\n\r\n\t\tcheckBox.setAttribute(\"type\", \"checkbox\");\r\n\t\ttask.classList.add(\"task\");\r\n\t\tdueDate.classList.add(\"dueDate\");\r\n\t\tcheckBox.classList.add(\"checkbox\");\r\n\r\n\t\ttaskName.textContent = name;\r\n\t\tdueDate.textContent = date();\r\n\t\ttask.append(taskName, dueDate, checkBox);\r\n\t\ttaskContainer.append(task);\r\n\t}\r\n\r\n\treturn {\r\n\t\ttaskDom,\r\n\t\tprojectDom,\r\n\t\taddTask,\r\n\t\taddProject,\r\n\t}\r\n\r\n})();\r\n\r\ndom.projectDom(\"Top\");\r\ndom.taskDom(\"hello\");\r\n\n\n//# sourceURL=webpack://to_do_list/./src/modules/dom.js?");
+
+/***/ }),
+
+/***/ "./src/modules/projects.js":
+/*!*********************************!*\
+  !*** ./src/modules/projects.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Project\": () => (/* binding */ Project)\n/* harmony export */ });\nclass Project {\r\n\tconstructor (name) {\r\n\t\tthis.name = name;\r\n\t}\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://to_do_list/./src/modules/projects.js?");
+
+/***/ }),
+
+/***/ "./src/modules/tasks.js":
+/*!******************************!*\
+  !*** ./src/modules/tasks.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Task\": () => (/* binding */ Task)\n/* harmony export */ });\n/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ \"./src/modules/dom.js\");\n\r\n\r\nclass Task {\r\n\tconstructor (title) {\r\n\t\tthis.title = title;\r\n\t}\r\n} \r\n\r\n\r\n\n\n//# sourceURL=webpack://to_do_list/./src/modules/tasks.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
