@@ -39,7 +39,7 @@ p, h2 {
 
 .main {
 	display: grid;
-	grid-template-columns: 150px 250px;
+	grid-template-columns: 20% 80%;
 	margin-top: 35px;
 }
 
@@ -55,10 +55,10 @@ p, h2 {
 }
 
 .task {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	border-bottom: 2px solid #e4fbff;
-	margin-top: 10px;
+	margin-top: 35px;
 }
 
 .tasksCont {
@@ -66,19 +66,22 @@ p, h2 {
 	color: #edeef7;
 	padding: 15px;
 	margin-bottom: 20px;
-	margin-left: 25px;
+	margin-left: 60px;
 }
 
 .tabs {
 	color: #7868e6;
-	
+}
+
+.dueDate {
+	margin-left: 20px;
 }
 
 .projectTitle {
 	font-size: 25px;
 }
 
-.projectName {
+.tab {
 	text-transform: capitalize;
 	font-size: 20px;
 	margin-bottom: 20px; 
@@ -145,10 +148,10 @@ p, h2 {
 	width: 25px;
 	height: 25px;
 	outline: none;
-	border-radius: 5px;
+	margin-left: 100px;
 }
 
-.projectsContainer {
+.project {
 	color: black;
 	font-size: 16px;
 	text-transform: capitalize;
@@ -156,8 +159,10 @@ p, h2 {
 	margin-bottom: 20px;
 }
 
-.projectsContainer p {
-	margin-right: 80px;
+.project p {
+	margin-top: 5px;
+	margin-left: 80px;
+	font-size: 18px;
 }
 
 .active {
@@ -173,11 +178,10 @@ p, h2 {
 	}
 
 	.main {
-		grid-template-columns: 250px 450px;
+		grid-template-columns: 250px 500px;
 	} 
 }
 
 .removeForm {
 	display: none;
 }      
-
