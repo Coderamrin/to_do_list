@@ -56,9 +56,21 @@ p, h2 {
 
 .task {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	border-bottom: 2px solid #e4fbff;
 	margin-top: 35px;
+}
+
+.removeTask {
+	margin-left: 80px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.removeTask:hover,
+.removeProject:hover {
+	color: red;
+	font-weight: bolder;
 }
 
 .tasksCont {
@@ -148,12 +160,12 @@ p, h2 {
 	width: 25px;
 	height: 25px;
 	outline: none;
-	margin-left: 100px;
+	margin-left: 50px;
+	margin-bottom: 5px; 
 }
 
 .project {
 	color: black;
-	font-size: 16px;
 	text-transform: capitalize;
 	display: flex;
 	margin-bottom: 20px;
@@ -162,7 +174,6 @@ p, h2 {
 .project p {
 	margin-top: 5px;
 	margin-left: 80px;
-	font-size: 18px;
 }
 
 .active {
