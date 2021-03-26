@@ -23,7 +23,7 @@ class Task {
 
 		taskName.textContent = this.name;
 		removeTask.textContent = "x";
-		dueDate.textContent = dom.date();
+		dueDate.textContent = `${dom.date()} + `;
 		task.append(taskName, dueDate, checkBox, removeTask);
 		taskContainer.append(task);
 
