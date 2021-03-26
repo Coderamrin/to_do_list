@@ -1,8 +1,10 @@
 let dom = (() => {
+	let tabs = document.querySelectorAll(".tab");
 	let addProject = document.querySelector(".addProject");
 	let addTask = document.querySelector(".addTask");
 	let form = document.querySelector(".form");
-	let formField = document.querySelector(".formField"); 
+	let formField = document.querySelector(".formField");
+	let projectNF = document.querySelector(".projectNF"); 
 	let add = document.querySelector(".add");
 	let cancel = document.querySelector(".cancel");
 
@@ -23,6 +25,8 @@ let dom = (() => {
 		add,
 		cancel,
 		date, 
+		tabs,
+		projectNF,
 	}
 
 })();

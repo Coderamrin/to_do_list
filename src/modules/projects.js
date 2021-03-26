@@ -7,7 +7,7 @@ class Project {
 	createProject() {
 		let projects = document.querySelector(".projects");
 		let projectContainer = document.createElement("div");
-		let projectName = document.createElement("h3");
+		let projectName = document.createElement("h4"); 
 		let removeProject = document.createElement("p");
 
 		projectContainer.classList.add("projectContainer");
@@ -16,11 +16,13 @@ class Project {
 		projectName.textContent = this.name;
 		removeProject.textContent = "x";
 
+		projectContainer.classList.add("tab");
 		projectContainer.classList.add("project"); 
 		removeProject.classList.add("removeProject");
 
 		projectContainer.append(projectName, removeProject);
 		projects.append(projectContainer);
+
 
 		removeProject.addEventListener("click", ()=> {
 			projects.removeChild(projectContainer);
