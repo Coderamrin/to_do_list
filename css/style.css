@@ -39,8 +39,8 @@ p, h2 {
 
 .main {
 	display: grid;
-	grid-template-columns: 20% 80%;
-	margin-top: 35px;
+	grid-template-columns: 20% 85%;
+	margin-top: 35px; 
 }
 
 .title {  
@@ -90,13 +90,14 @@ p, h2 {
 }
 
 .projectTitle {
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .tab {
 	text-transform: capitalize;
-	font-size: 20px;
+	font-size: 18px;
 	margin-bottom: 20px; 
+	cursor: pointer;
 }
 
 .btn {
@@ -172,7 +173,6 @@ p, h2 {
 }
 
 .project p {
-	margin-top: 5px;
 	margin-left: 80px;
 }
 
@@ -189,10 +189,15 @@ p, h2 {
 	}
 
 	.main {
-		grid-template-columns: 250px 500px;
+		grid-template-columns: 150px 600px;
 	} 
 }
 
 .removeForm {
 	display: none;
 }      
+
+
+.hide {
+	display: none;
+}
