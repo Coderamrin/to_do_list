@@ -59,8 +59,9 @@ dom.addProject.addEventListener("click", () => {
 }); 
 
 dom.addTask.addEventListener("click", () => {
-	showFormCb(); 
-	dom.projectNF.classList.remove("removeForm");
+	showFormCb();
+	dom.projectNF.classList.remove("hide");
+	dom.dueDate.classList.remove("hide");
 	dom.add.removeEventListener("click", addprojectCb);
-	dom.add.addEventListener("click", addtaskCb);
+	dom.add.addEventListener("click", addtaskCb); 
 });
