@@ -1,9 +1,10 @@
 import {dom} from './dom.js'; 
 
 class Task { 
-	constructor (name, projectN) {
+	constructor (name, projectN, dueDate) {
 		this.name = name;
 		this.projectN = projectN;
+		this.dueDate = dueDate;
 	}
 
 	createTask() {
@@ -23,7 +24,7 @@ class Task {
 
 		taskName.textContent = this.name;
 		removeTask.textContent = "x";
-		dueDate.textContent = `${dom.date()} + `;
+		dueDate.textContent = this.dueDate;
 		task.append(taskName, dueDate, checkBox, removeTask);
 		taskContainer.append(task);
 

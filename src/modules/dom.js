@@ -4,6 +4,7 @@ let dom = (() => {
 	let addTask = document.querySelector(".addTask");
 	let form = document.querySelector(".form");
 	let formField = document.querySelector(".formField");
+	let dueDate = document.querySelector(".dueDateF");
 	let projectNF = document.querySelector(".projectNF"); 
 	let add = document.querySelector(".add");
 	let cancel = document.querySelector(".cancel");
@@ -27,6 +28,7 @@ let dom = (() => {
 		date, 
 		tabs,
 		projectNF,
+		dueDate,
 	}
 
 })();
